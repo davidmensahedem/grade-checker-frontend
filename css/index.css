@@ -1,0 +1,173 @@
+.maincontainer {
+  background-image: url("../img/headerbg.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 300px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.mainform {
+  background-image: url("../img/formbg.jpg"); /* The image used */
+  background-color: rgba(
+    211,
+    43,
+    43,
+    0.5
+  ); /* Used if the image is unavailable */
+  height: 300px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.mainformcontent {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: inherit;
+  padding-top: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border-radius: 25px;
+}
+
+.headeroverlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: inherit;
+}
+
+.buttoncontainer {
+  text-align: center;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.submit-btn {
+  background-color: rgb(75, 9, 9);
+  color: white;
+  width: 100%;
+  border-radius: 25px;
+}
+.headerintro {
+  padding-top: 50px;
+}
+.headerintro h1 {
+  color: white;
+  font-weight: bolder;
+  font-size: 40px;
+
+  padding-left: 10px;
+}
+
+.gradecheckerbtn {
+  background-color: rgb(94, 14, 14);
+  margin-left: 10px;
+  padding: 10px;
+  color: white;
+  margin-top: 25px;
+  border-radius: 25px;
+  width: 150px;
+}
+
+.gradecheckerbtn:hover {
+  color: wheat;
+}
+
+.formimagecontainer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formimage {
+  width: 80px;
+  height: 50px;
+}
+
+#studentid {
+  border-radius: 25px;
+  text-align: center;
+}
+
+.mainoverlay {
+  position: absolute; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: inherit; /* Full height (cover the whole page) */
+  top: inherit;
+  left: 0;
+  background-color: rgba(211, 43, 43, 0.6); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.formoverlay {
+  position: absolute;
+  display: block;
+  width: 100%; /* Full width (cover the whole page) */
+  height: inherit; /* Full height (cover the whole page) */
+  top: inherit;
+  left: inherit;
+  background-color: rgba(211, 43, 43, 0.8); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.navproperties {
+  background-color: rgb(94, 14, 14);
+}
+
+.nav-link {
+  color: white;
+}
+
+.ul-justifyself {
+  justify-self: end;
+}
+
+#headercontainer p {
+  color: rgb(87, 8, 8);
+  font-weight: bolder;
+  font-size: 40px;
+  line-height: 45px;
+}
+
+.togglercolor {
+  background-color: rgb(172, 38, 38);
+}
+
+.barcolor {
+  color: white;
+}
+
+#studentcontent {
+  padding: 10px;
+}
+
+#studentinfo {
+  line-height: 13px;
+}
+
+footer {
+  background-color: rgb(75, 9, 9);
+  padding: 12px;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .headerintro {
+    text-align: center;
+    padding-left: 0px !important;
+  }
+
+  .headerintro h1 {
+    padding-left: 0px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .headerintro {
+    padding-left: 20px;
+  }
+}

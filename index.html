@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Checking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- main container -->
+    <div class="">
+        <nav class="navbar navbar-expand-lg navproperties">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" width="50" height="50" />
+                </a>
+                <button class="navbar-toggler togglercolor" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="barcolor"><i class="fa fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#mainform">Check Grade</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Guide
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">How to Check</a></li>
+                                <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
+                                <!-- <li>
+                                    <hr class="dropdown-divider">
+                                </li> -->
+                                <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                            </ul>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li> -->
+                    </ul>
+                    <!-- <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form> -->
+                </div>
+            </div>
+        </nav>
+
+        <header class="maincontainer">
+
+            <div class="headeroverlay">
+                <div class="headerintro">
+                    <h1 class="animate__animated animate__fadeInLeft">STUDENT <br />GRADE CHECKING
+                    </h1>
+                    <a href="#mainform" class="btn gradecheckerbtn animate__animated animate__fadeInLeft">Check
+                        Grade <span><i class="fa fa-arrow-right"></i></span></a>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <div class="p-4">
+
+                        <div id="mainform" class="mainform">
+                            <div class="mainformcontent">
+
+                                <div class="formimagecontainer">
+                                    <img class="formimage" src="img/ipmc.jpg" />
+                                </div>
+                                <form id="studentform" onsubmit="show(event)">
+                                    <div class="form-group">
+                                        <input placeholder="STUDENT ID" type="text" id="studentid" class="form-control">
+                                        <span class="small animate__animated animate__animated animate__bounceIn">
+                                            <b>
+                                                <span id="showvalidation" class="text-white"></span>
+                                            </b>
+                                        </span>
+                                    </div>
+                                    <div class="buttoncontainer">
+                                        <button type="submit" class="btn submit-btn">
+                                            GO <span><i class="fa fa-arrow-right"></i></span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4">
+                        <div id="studentcontent">
+                            <div id="headercontainer">
+                                <p>STUDENT<br />
+                                    INFORMATION</p>
+                            </div>
+                            <div style="display: none;" id="studentinfo">
+
+                                <p><b>Name :</b>
+                                    <span id="studentname"></span>
+                                </p>
+                                <p><b>Course :</b>
+                                    <span id="studentcourse"></span>
+                                </p>
+                                <p> <b>Period :</b>
+                                    <span id="studentperiod"></span>
+                                </p>
+                                <p>
+                                    <b>Branch :</b>
+                                    <span id="studentbranch"></span>
+                                </p>
+                                <p>
+                                    <b>Score :</b>
+                                    <span id="studentscore"></span>
+                                </p>
+                                <p> <b>Awarded :</b>
+                                    <b><span id="studentgradeawarded"></span></b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    </div>
+
+    <footer>
+        <p>&copy; <span id="date"></span> Project Work by Joshua Kings </p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
